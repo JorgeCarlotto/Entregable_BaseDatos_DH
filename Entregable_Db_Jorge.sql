@@ -26,7 +26,7 @@ CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,6 +35,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'completada'),(2,'No completada'),(3,'Se puede mejorar'),(4,'Revisar'),(5,'omitir'),(6,'tal vez mañana'),(7,'completa con errores'),(8,'revisar'),(9,'controlar'),(10,'saltar tarea');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +85,7 @@ CREATE TABLE `notes` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,6 +94,7 @@ CREATE TABLE `notes` (
 
 LOCK TABLES `notes` WRITE;
 /*!40000 ALTER TABLE `notes` DISABLE KEYS */;
+INSERT INTO `notes` VALUES (1,1,'nota uno','2021-11-13','2021-11-13','Limpiar Pc',0),(4,3,'nota 2','2021-11-13','2021-11-13','Repasar pisos',0),(5,4,'nota 3','2021-11-13','2021-11-13','Cortar pasto',0),(6,5,'nota 4','2021-11-13','2021-11-13','Comprar Leche',0),(7,5,'nota 5','2021-11-13','2021-11-13','Limpiar alfombra',0),(8,6,'nota 7','2021-11-13','2021-11-13','Banar perro',0),(9,7,'nota 8','2021-11-13','2021-11-13','Colgar la ropa',0),(10,8,'nota 9','2021-11-13','2021-11-13','Barrer piso',0),(11,9,'nota 10','2021-11-13','2021-11-13','Comprar birra',0),(12,10,'nota 11','2021-11-13','2021-11-13','Comprar asado',0);
 /*!40000 ALTER TABLE `notes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-12 13:26:58
+-- Dump completed on 2021-11-13 17:35:58
